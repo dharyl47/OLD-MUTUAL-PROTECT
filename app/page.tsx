@@ -238,7 +238,7 @@ export default function Chat() {
 
               {/* Button Section */}
               <div className="flex justify-center mt-4 space-x-4">
-                <button
+                {/* <button
                   className="bg-[#009677] text-white px-4 py-2 rounded-md"
                   onClick={handleModalToggle}
                   style={{visibility: "hidden"}}
@@ -251,7 +251,7 @@ export default function Chat() {
                   style={{visibility: "hidden"}}
                 >
                   Contact a Financial Adviser
-                </button>
+                </button> */}
               </div>
               {/* Modal Popup */}
               {isModalOpen && (
@@ -389,9 +389,10 @@ export default function Chat() {
                 </div>
               )}
             </div>
-
+              
             <div
               id="chatbox"
+              style={{marginBottom: "100px"}}
               className="p-4 h-[calc(100vh-250px)]  overflow-y-auto"
               ref={chatboxRef}
             >
