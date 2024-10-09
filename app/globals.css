@@ -7,7 +7,7 @@
 /* Apply Montserrat globally with !important to ensure it overrides other styles */
 * {
   font-family: 'Montserrat', sans-serif !important;
-  font-size: 20px !important; /* Adjust font size if needed */
+  font-size: 14px !important; /* Adjust font size if needed */
 }
 
 /* #chat-container{
