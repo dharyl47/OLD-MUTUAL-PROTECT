@@ -15,7 +15,7 @@
     padding-left: 100px;
 } */
  #chatbox {
-  max-height: calc(100vh - 100px); /* Adjust this based on your header and input section height */
+  max-height: calc(90vh - 100px); /* Adjust this based on your header and input section height */
   overflow-y: auto;
 }
 
