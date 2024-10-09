@@ -86,7 +86,7 @@ export default function Chat() {
         id: Date.now().toString(),
         role: "assistant",
         content:
-          "💡 Welcome to Moneyversity! We're here to help with any questions you have about personal finance. Feel free to ask anything, and we'll provide the information you need to make great decisions. Let's get started! 💬",
+          "💡 Welcome to the AI Experiment! We're here to help with any questions you have about personal finance. Feel free to ask anything, and we'll provide the information you need to make great decisions. Let's get started! 💬",
         // "Hello 😊 and welcome to Moneyversity's Estate Planning Consultant 🤖. I'm here to help you navigate the estate planning process with ease. Together, we'll ensure your assets and wishes are well- documented and protected. Ready to get started on this important journey?",
       },
     ]);
@@ -238,18 +238,20 @@ export default function Chat() {
 
               {/* Button Section */}
               <div className="flex justify-center mt-4 space-x-4">
-                {/* <button
+                <button
                   className="bg-[#009677] text-white px-4 py-2 rounded-md"
                   onClick={handleModalToggle}
+                  style={{visibility: "hidden"}}
                 >
                   FAQs
                 </button>
                 <button
                   className="bg-[#009677] text-white px-4 py-2 rounded-md"
                   onClick={handleAdvisorModalToggle}
+                  style={{visibility: "hidden"}}
                 >
                   Contact a Financial Adviser
-                </button> */}
+                </button>
               </div>
               {/* Modal Popup */}
               {isModalOpen && (
