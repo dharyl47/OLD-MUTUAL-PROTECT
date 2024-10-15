@@ -86,7 +86,7 @@ export default function Chat() {
         id: Date.now().toString(),
         role: "assistant",
         content:
-          "💡 Welcome to the AI Experiment! We're here to help with any questions you have about personal finance. Feel free to ask anything, and we'll provide the information you need to make great decisions. Let's get started! 💬",
+          "💡 Welcome to GIA! We're here to help with any questions you have about personal finance. Feel free to ask anything, and we'll provide the information you need to make great decisions. Let's get started! 💬",
         // "Hello 😊 and welcome to Moneyversity's Estate Planning Consultant 🤖. I'm here to help you navigate the estate planning process with ease. Together, we'll ensure your assets and wishes are well- documented and protected. Ready to get started on this important journey?",
       },
     ]);
@@ -229,7 +229,7 @@ export default function Chat() {
               <div className="flex justify-center -mt-12 space-x-4">
                 <div className="text-lg font-semibold text-center text-4xl">
                   <p className="text-center text-2xl font-bold">
-                    Welcome to the AI Experiment
+                    Welcome to GIA
                   </p>
                 </div>
 
