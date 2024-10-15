@@ -222,7 +222,7 @@ export default function Chat() {
   return (
     <div className="fixed inset-0 bg-[#212121] flex flex-col">
       <div className="fixed inset-0">
-        <div className="fixed inset-0 flex items-end lg:w-1/2 xl:w-2/5 mx-auto ">
+        <div className="fixed inset-0 flex items-end lg:w-3/4 mx-auto ">
           <div className="bg-[#212121] shadow-md rounded-lg w-full h-full">
             {/* Header Section */}
             <div className="p-4 text-white rounded-t-lg items-center mt-12">

@@ -40,9 +40,26 @@ export async function POST(req: Request) {
   // Define the prompt including Old Mutual information
   const prompt = `
     Please only answer using the information provided between (START Old Mutual Protect) and (END Old Mutual Protect) in the Old Mutual Protect - RSA Reference Guide.
-    If the user's question is not covered by the information between these markers, respond with: 'I'm sorry, I currently don't have information on that topic, but I'm here to assist with any other questions you may have.'
+    If user question is not related in the Old Mutual Protect - RSA Reference Guide please respond to the user with this templated message
+    "I'm sorry, I currently don't have information on that topic. Please ask about Old Mutual Protect life insurance products or related topics."
 
     Available Information:
+     If user question is not related in the Old Mutual Protect - RSA Reference Guide please respond to the user with this templated message
+    "I'm sorry, I currently don't have information on that topic. Please ask about Old Mutual Protect life insurance products or related topics."
+
+    Refined Prompt with HTML Formatting Instructions:
+
+Please format all responses using basic HTML tags for readability. Specifically:
+
+Use <p> tags for paragraphs.
+Use <br> tags for line breaks between sections.
+Use <ul> for unordered lists and <ol> for ordered lists, with <li> for each list item.
+Bold important points using <b>, and italicize text using <i>.
+Use <h1>, <h2>, or <h3> tags for headings and subheadings to organize content.
+For links, use <a href="URL"> to embed hyperlinks.
+Use <blockquote> to highlight important quotes.
+Insert horizontal lines using <hr> to separate different sections of the response.
+Make sure to return the response in proper HTML formatting.
 
             (START Old Mutual Protect)
 Life Insurance Overview: Life insurance is a contract where an owner (policyholder) and an insurer agree that the insurer will pay a designated beneficiary a sum of money in exchange for regular premium payments, should the insured person die during the benefit term. The insurance amount can be paid either as a single lump sum or in monthly installments.
@@ -211,13 +228,29 @@ BASE jumping or sky diving.
 War-related events.
 
             (END Old Mutual Protect)
+            Refined Prompt with HTML Formatting Instructions:
+
+Please format all responses using basic HTML tags for readability. Specifically:
+
+Use <p> tags for paragraphs.
+Use <br> tags for line breaks between sections.
+Use <ul> for unordered lists and <ol> for ordered lists, with <li> for each list item.
+Bold important points using <b>, and italicize text using <i>.
+Use <h1>, <h2>, or <h3> tags for headings and subheadings to organize content.
+For links, use <a href="URL"> to embed hyperlinks.
+Use <blockquote> to highlight important quotes.
+Insert horizontal lines using <hr> to separate different sections of the response.
+Make sure to return the response in proper HTML formatting.
+
             
             Always ensure your response is polite, clear, and helpful. If additional details are requested, provide them only if they are within the scope of the available information.
+             If user question is not related in the Old Mutual Protect - RSA Reference Guide please respond to the user with this templated message
+    "I'm sorry, I currently don't have information on that topic. Please ask about Old Mutual Protect life insurance products or related topics."
             `;
  // Apply the prompt to each user message
   messages = messages.map((message: any) => {
     if (message.role === 'user') {
-      return { ...message, content: `${prompt} ${message.content}` };
+      return { ...message, content: `${prompt} ${message.content}, can you answer with html code as formatiing? Please format all responses using basic HTML tags for readability. Specifically: Use <p> tags for paragraphs. Use <br> tags for line breaks between sections. Use <ul> for unordered lists and <ol> for ordered lists, with <li> for each list item. Bold important points using <b>, and italicize text using <i>. Use <h1>, <h2>, or <h3> tags for headings and subheadings to organize content. For links, use <a href="URL"> to embed hyperlinks. Use <blockquote> to highlight important quotes. Insert horizontal lines using <hr> to separate different sections of the response. Make sure to return the response in proper HTML formatting.` };
     } else {
       return message;
     }
